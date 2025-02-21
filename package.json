@@ -5,20 +5,28 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx watch --env-file=.env src/server.ts"
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "build": "tsup-node",
+    "db-generate": "npx drizzle-kit generate",
+    "db-migrate": "npx drizzle-kit migrate"
   },
   "author": "franwanderley",
   "license": "ISC",
   "dependencies": {
     "@biomejs/biome": "^1.9.4",
     "@fastify/cors": "^10.0.2",
+    "drizzle-orm": "^0.39.3",
     "fastify": "^5.2.1",
     "fastify-type-provider-zod": "^4.0.2",
+    "ioredis": "^5.5.0",
     "nlw-connect": "file:",
+    "postgres": "^3.4.5",
+    "tsup": "^8.3.6",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
+    "drizzle-kit": "^0.30.4",
     "tsx": "^4.19.3",
     "typescript": "^5.7.3"
   }
